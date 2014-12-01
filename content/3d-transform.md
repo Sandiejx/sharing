@@ -46,7 +46,7 @@
 
 ## 3D geometric transforms
 
-<iframe src="http://jsbin.com/dudojo/199/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 700px;"></iframe>
+<iframe src="http://jsbin.com/dudojo/199/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 600px;"></iframe>
 
 ---
 
@@ -88,7 +88,7 @@
 
 demo -> color_cube.html
 
-<iframe src="http://jsbin.com/xoliza/20/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 700px;"></iframe>
+<iframe src="http://jsbin.com/xoliza/20/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 650px;"></iframe>
 
 ---
 
