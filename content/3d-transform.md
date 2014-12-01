@@ -46,13 +46,13 @@
 
 ## 3D geometric transforms
 
-<iframe src="http://jsbin.com/dudojo/199/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 700px; min-height: 700px;"></iframe>
+<iframe src="http://jsbin.com/dudojo/199/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 800px; min-height: 700px;"></iframe>
 
 ---
 
 ## perspective
 
-<iframe src="http://jsbin.com/dudojo/195/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 700px; min-height: 600px;"></iframe>
+<iframe src="http://jsbin.com/dudojo/195/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 800px; min-height: 600px;"></iframe>
 
 ```css
 -webkit-perspective: 1000px;
@@ -76,7 +76,7 @@
 
 @state: black, @fragment
 
-<iframe src="http://jsbin.com/yolix/195/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 800px; min-height: 650px;"></iframe>
+<iframe src="http://jsbin.com/yolix/193/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 650px;"></iframe>
 
 ```css 
 -webkit-transform-style: preserve-3d;
@@ -88,13 +88,13 @@
 
 demo -> color_cube.html
 
-<iframe src="http://jsbin.com/xoliza/18/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 700px; min-height: 700px;"></iframe>
+<iframe src="http://jsbin.com/xoliza/18/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 800px; min-height: 700px;"></iframe>
 
 ---
 
 ## magic cube
 
-<iframe src="http://jsbin.com/yozihi/5/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width:700px; min-height: 700px;"></iframe>
+<iframe src="http://jsbin.com/yozihi/5/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width:800px; min-height: 700px;"></iframe>
 
 ---
 
