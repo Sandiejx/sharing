@@ -28,7 +28,7 @@
 
 @state: black, @fragment
 
-<iframe src="http://jsbin.com/nafoxu/307/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 400px;"></iframe>
+<iframe src="http://jsbin.com/nafoxu/307/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px;"></iframe>
 
 
 ---
@@ -46,7 +46,7 @@
 
 ## 3D geometric transforms
 
-<iframe src="http://jsbin.com/dudojo/193/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px;"></iframe>
+<iframe src="http://jsbin.com/dudojo/193/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 700px;"></iframe>
 
 ---
 
@@ -64,7 +64,7 @@
 
 @state: black, @fragment
 
-<iframe src="http://jsbin.com/saxem/86/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px;"></iframe>
+<iframe src="http://jsbin.com/saxem/86/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 700px;"></iframe>
 
 ```css
 -webkit-transform-style: flat;
@@ -76,7 +76,7 @@
 
 @state: black, @fragment
 
-<iframe src="http://jsbin.com/yolix/188/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px;"></iframe>
+<iframe src="http://jsbin.com/yolix/188/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 700px;"></iframe>
 
 ```css 
 -webkit-transform-style: preserve-3d;
@@ -88,13 +88,13 @@
 
 * demo -> color_cube.html
 
-<iframe src="http://jsbin.com/xoliza/18/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px;"></iframe>
+<iframe src="http://jsbin.com/xoliza/18/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 700px;"></iframe>
 
 ---
 
 ## magic cube
 
-<iframe src="http://jsbin.com/yozihi/1/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px;"></iframe>
+<iframe src="http://jsbin.com/yozihi/1/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 700px;"></iframe>
 
 ---
 
