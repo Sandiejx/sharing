@@ -88,13 +88,13 @@
 
 * demo -> color_cube.html
 
-<iframe src="http://jsbin.com/xoliza/18/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 700px;"></iframe>
+<iframe src="http://jsbin.com/xoliza/18/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
 ## magic cube
 
-<iframe src="http://jsbin.com/yozihi/1/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 700px;"></iframe>
+<iframe src="http://jsbin.com/yozihi/4/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
