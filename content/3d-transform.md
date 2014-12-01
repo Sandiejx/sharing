@@ -64,7 +64,7 @@
 
 @state: black, @fragment
 
-<iframe src="http://jsbin.com/saxem/96/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 700px;"></iframe>
+<iframe src="http://jsbin.com/saxem/96/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ```css
 -webkit-transform-style: flat;
