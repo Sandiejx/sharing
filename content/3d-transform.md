@@ -84,6 +84,19 @@
 
 ---
 
+## backface-visibility属性
+
+@state: black, @fragment
+
+<iframe src="http://jsbin.com/xoliza/20/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 650px;"></iframe>
+
+```css 
+backface-visibility:hidden;
+```
+
+
+---
+
 ## 分析各个面
 
 demo -> color_cube.html
