@@ -91,7 +91,7 @@
 <iframe src="http://jsbin.com/xoliza/20/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 650px;"></iframe>
 
 ```css 
-backface-visibility:hidden;
+backface-visibility:hidden; /*隐藏被旋转的元素的背面*/
 ```
 
 
@@ -122,6 +122,8 @@ demo -> color_cube.html
 * 变换类型 
 * transform-style: flat;
 * transform-style: preserve-3d;
+* 隐藏被旋转的元素的背面
+* backface-visibility: hidden;
 
 ---
 
