@@ -50,7 +50,7 @@
 
 @state: black, @fragment
 
-@font-face 不同于其他 CSS 规则是选择器,⽽而是描述⼀一个 Web Font
+\@font-face 不同于其他 CSS 规则是选择器,⽽而是描述⼀一个 Web Font
 
 ```css
 @font-face {
@@ -98,7 +98,7 @@
 
 ## @font-face 属性
 
-@state: black
+@state: black, @fragment
 
 * font-family
 * src
@@ -204,7 +204,6 @@ Web Open Font Format(.woff, .woff2)
 
 ---
 
-
 ## 字体压缩转换工具
 
 @fragment
@@ -220,7 +219,6 @@ Web Open Font Format(.woff, .woff2)
 ## 作为 Icon 使用
 
 ---
-
 
 ## Icon Fonts 在线库
 
@@ -245,7 +243,7 @@ http://fontello.com/
      speak: none;
      user-select: none;
 }
- .icon-name:before {
+.icon-name:before {
      content: "\e900";
 }
 demo(jsbin) cart
@@ -266,7 +264,6 @@ demo(jsbin) cart
 * foontello
 
 ---
-
 
 @state: blue
 
