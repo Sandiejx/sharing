@@ -42,8 +42,7 @@
 * 放⼤大缩⼩小不失真
 * 大小，颜色可以在css中设置，配合css3动画效果更佳
 * 可以多次复用
-
-[Demo] http://jsbin.com/gababa
+*[Demo] http://jsbin.com/gababa
 
 ---
 
@@ -51,7 +50,7 @@
 
 @state: black
 
-\@font-face 不同于其他 CSS 规则是选择器,⽽而是描述⼀一个 Web Font
+* @font-face 不同于其他 CSS 规则是选择器,⽽而是描述⼀一个 Web Font
 
 ```css
 @font-face {
