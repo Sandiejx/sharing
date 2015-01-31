@@ -1,6 +1,7 @@
 # Web Fonts 介绍
 
 ---
+
 ## 问柏盼
 
 * unicode-range
@@ -48,11 +49,11 @@
 
 ## @font-face
 
-@state: black, @fragment
+@state: black
 
-* @font-face 不同于其他 CSS 规则是选择器,⽽而是描述⼀一个 Web Font
+@font-face 不同于其他 CSS 规则是选择器,⽽而是描述⼀一个 Web Font
 
-* ```css
+```css
 @font-face {
     descriptor: value;
     descriptor: value;
@@ -167,7 +168,6 @@
 @fragment
 
 ### 本地使用
-
 * 将拿到的字体转换成兼容浏览器的多个版本
 * 通过 CSS 定义 @font-face 引⽤用对应的字体
 
@@ -175,7 +175,6 @@
 * [Google Fonts] https://www.google.com/fonts
 * [Just Font] http://cn.justfont.com/
 * [有字库	] http://www.youziku.com/
-
 
 ---
 
