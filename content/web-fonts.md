@@ -50,9 +50,9 @@
 
 @state: black, @fragment
 
-\@font-face 不同于其他 CSS 规则是选择器,⽽而是描述⼀一个 Web Font
+* @font-face 不同于其他 CSS 规则是选择器,⽽而是描述⼀一个 Web Font
 
-```css
+* ```css
 @font-face {
     descriptor: value;
     descriptor: value;
@@ -127,14 +127,14 @@
 
 ---
 
-## Web Fonts 包括的⼏几种字体
+## Web Fonts 包括的几种字体
 
 @state: black, @fragment
 
-TrueType(.ttf), OpenType(.ttf, .otf) 
-Embedded OpenType(.eot) //IE最早支持
-SVG Font(.svg, .svgz)
-Web Open Font Format(.woff, .woff2)
+* TrueType(.ttf), OpenType(.ttf, .otf) 
+* Embedded OpenType(.eot) //IE最早支持
+* SVG Font(.svg, .svgz)
+* Web Open Font Format(.woff, .woff2)
 
 ---
 
@@ -224,10 +224,10 @@ Web Open Font Format(.woff, .woff2)
 
 @fragment
 
-https://icomoon.io/app/ 
-http://fortawesome.github.io/Font-Awesome/icons/ 
-http://iconfont.cn/
-http://fontello.com/
+* https://icomoon.io/app/ 
+* http://fortawesome.github.io/Font-Awesome/icons/ 
+* http://iconfont.cn/
+* http://fontello.com/
 
 ---
 
