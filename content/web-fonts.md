@@ -51,7 +51,7 @@
 
 @state: black
 
-@font-face 不同于其他 CSS 规则是选择器,⽽而是描述⼀一个 Web Font
+\@font-face 不同于其他 CSS 规则是选择器,⽽而是描述⼀一个 Web Font
 
 ```css
 @font-face {
