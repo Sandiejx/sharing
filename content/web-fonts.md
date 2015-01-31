@@ -166,11 +166,11 @@
 
 @fragment
 
-### 本地使用
+* ### 本地使用
 * 将拿到的字体转换成兼容浏览器的多个版本
 * 通过 CSS 定义 @font-face 引⽤用对应的字体
 
-### 在线字体服务
+* ### 在线字体服务
 * [Google Fonts] https://www.google.com/fonts
 * [Just Font] http://cn.justfont.com/
 * [有字库	] http://www.youziku.com/
@@ -251,12 +251,12 @@ demo(jsbin) cart
 
 ## 自己制作的Icon
 
-### 设计师提供⽮矢量图 - SVG 格式
+* ### 设计师提供⽮矢量图 - SVG 格式
 * 对齐到像素
 * 曲线闭合
 * 色彩填充
 
-### 在线导⼊,制作
+* ### 在线导⼊,制作
 * Icomoon
 * Iconfont
 * foontello
