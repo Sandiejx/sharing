@@ -42,7 +42,7 @@
 * 放⼤大缩⼩小不失真
 * 大小，颜色可以在css中设置，配合css3动画效果更佳
 * 可以多次复用
-*[Demo] http://jsbin.com/gababa
+* [Demo] http://jsbin.com/gababa
 
 ---
 
