@@ -1,4 +1,12 @@
-# 3D transforms in CSS3
+# Web Fonts 介绍
+
+---
+## 问柏盼
+
+* unicode-range
+* why you`ll love GitHub
+* http://font.qiwoo.org/
+* 在线制作iconfont的几个网站链接
 
 ---
 
@@ -12,124 +20,257 @@
 
 ---
 
-## 2D变换函数
-
-@state: blue, @fragment
-
-* rotate
-* scale
-* skew
-* translate
-* matrix
+## Web Fonts 简介
 
 ---
 
-## demos
+## 什么是Web Fonts
 
 @state: black, @fragment
 
-<iframe src="http://jsbin.com/nafoxu/307/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 500px;"></iframe>
-
+* 引用在线字体
+* css3
+* @font-face
 
 ---
 
-## 3D变换函数
+## Web Fonts 的优点
 
 @state: black, @fragment
 
-* 3D位移 : translateZ() 和 translate3d()
-* 3D旋转 : rotateX()、rotateY()、rotateZ() 和 rotate3d()
-* 3D缩放 : scaleZ() 和 scale3d()
-* 3D矩阵 : matrix3d()
+* 放⼤大缩⼩小不失真
+* 大小，颜色可以在css中设置，配合css3动画效果更佳
+* 可以多次复用
+
+[Demo] http://jsbin.com/gababa
 
 ---
 
-## 3D geometric transforms
+## @font-face
 
-<iframe src="http://jsbin.com/dudojo/199/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 600px;"></iframe>
+@state: black, @fragment
 
----
-
-## perspective
-
-<iframe src="http://jsbin.com/dudojo/195/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 600px;"></iframe>
+@font-face 不同于其他 CSS 规则是选择器,⽽而是描述⼀一个 Web Font
 
 ```css
--webkit-perspective: 1000px;
+@font-face {
+    descriptor: value;
+    descriptor: value;
+    ...
+}
 ```
 
 ---
 
-## transform-style属性
-
-@state: black, @fragment
-
-<iframe src="http://jsbin.com/saxem/100/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 600px;"></iframe>
+## font-family & src
 
 ```css
--webkit-transform-style: flat;
+@font-face {
+    font-family: 'MyFontFamily';
+    src: local(MyFontFamily),
+    url('font.eot?#iefix') format('embedded-opentype'),
+	/*IE6+*/
+	url('font.woff') format('woff'),
+	url('font.ttf')  format('truetype'),
+	url('font.svg#svgFontName') format(‘svg');
+}
 ```
 
 ---
 
-## transform-style属性
+## unicode-range
+
+```css
+@font-face {
+    font-family: 'MyFontFamily';
+    src: url('font1.ttf')  format(‘truetype');
+    unicode-range: U+2E80-FFFF, U+00-0F;
+}
+
+@font-face {
+    font-family: 'MyFontFamily';
+    src: url('font2.ttf')  format(‘truetype');
+    unicode-range: U+00F-FFF;
+}
+```
+
+---
+
+## @font-face 属性
+
+@state: black
+
+* font-family
+* src
+* font-style 
+* font-weight 
+* font-stretch 
+* unicode-range 
+* ...
+
+---
+
+## 浏览器兼容性
 
 @state: black, @fragment
 
-<iframe src="http://jsbin.com/yolix/197/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 650px;"></iframe>
-
-```css 
--webkit-transform-style: preserve-3d;
-```
+* IE5.5~IE8,IE9+
+* Firefox 3.5+
+* Chrome,Safari,Opera
+* iOS Safari
+* Android Browser 2.1+
+* Opera Mobile
+* Chrome for Android 
+* Firefox for Android 
+* IE Mobile
+* UC
 
 ---
 
-## backface-visibility属性
+## Web Fonts 包括的⼏几种字体
 
 @state: black, @fragment
 
-<iframe src="http://jsbin.com/xoliza/20/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 650px;"></iframe>
-
-```css 
-backface-visibility:hidden; /*隐藏被旋转的元素的背面*/
-```
-
+TrueType(.ttf), OpenType(.ttf, .otf) 
+Embedded OpenType(.eot) //IE最早支持
+SVG Font(.svg, .svgz)
+Web Open Font Format(.woff, .woff2)
 
 ---
 
-## 分析各个面
+## 浏览器对几种字体的支持情况
 
-demo -> color_cube.html
-
-<iframe src="http://jsbin.com/xoliza/20/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 900px; min-height: 650px;"></iframe>
+图片。。。传上图床
 
 ---
 
-## magic cube
+## Web Fonts 两方面的应用
 
-<iframe src="http://jsbin.com/yozihi/6/embed?output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width:900px; min-height: 700px;"></iframe>
+* 作为字体使用
+* 作为icon使用
 
 ---
+
+## 使⽤ Web Fonts 做字体的好处
 
 @fragment
 
-## 总结
-
-* 2D几何变换
-* 3D几何变换
-* 透视 
-* perspective: 1000px;
-* 变换类型 
-* transform-style: flat;
-* transform-style: preserve-3d;
-* 隐藏被旋转的元素的背面
-* backface-visibility: hidden;
+* 页⾯面美观、⾃自动适配⾼高清屏(使⽤用户看到的效果和设计⼀一致,更趋向于设计图的效果)
+* 显⽰示⽣生僻字
+* ⽀支持选中、复制、查找、修改⽅方便
+* 对搜索引擎、翻译⼯工具、缩放、⽆无障碍设备原⽣生⽀支持
 
 ---
 
+## 使⽤ Web Fonts
+
+@fragment
+
+### 本地使用
+
+* 将拿到的字体转换成兼容浏览器的多个版本
+* 通过 CSS 定义 @font-face 引⽤用对应的字体
+
+### 在线字体服务
+* [Google Fonts] https://www.google.com/fonts
+* [Just Font] http://cn.justfont.com/
+* [有字库	] http://www.youziku.com/
+
+
+---
+
+## 引用 Web Fonts
+
+@fragment
+
+```html
+<h2 class=“title”>我是使用了 Web Fonts 的标题</h2>
+```
+
+```css
+.title {
+    font-family: ‘myFontFamily’;
+}
+```
+
+---
+
+## 作为字体使用的一些问题
+
+@fragment
+
+* 版权问题（盗版、授权费、授权费）
+* 中文字体的问题（文件庞大-好几MB，字体转换）
+
+---
+
+
+## 字体压缩转换工具
+
+@fragment
+
+* 字体⼦子集 (embedded subset)
+* 字蛛 http://font-spider.org/
+* 显⽰示⽣生僻字
+* http://font.qiwoo.org/
+* Fontforge、ttf2eot、sfnt2woff、woff2_compress
+
+---
+
+## 作为 Icon 使用
+
+---
+
+
+## Icon Fonts 在线库
+
+@fragment
+
+https://icomoon.io/app/ 
+http://fortawesome.github.io/Font-Awesome/icons/ 
+http://iconfont.cn/
+http://fontello.com/
+
+---
+
+## Icon Fonts 的使用
+
+```html
+<h2><span class=“icon icon-name”></span>IconFonts</h2>
+```
+
+```css
+.icon {
+     font-family: 'fonticon';
+     speak: none;
+     user-select: none;
+}
+ .icon-name:before {
+     content: "\e900";
+}
+demo(jsbin) cart
+```
+
+---
+
+## 自己制作的Icon
+
+### 设计师提供⽮矢量图 - SVG 格式
+* 对齐到像素
+* 曲线闭合
+* 色彩填充
+
+### 在线导⼊,制作
+* Icomoon
+* Iconfont
+* foontello
+
+---
+
+
 @state: blue
 
-## 谢谢大家！
+## Thanks
 
 <p style="font-size:6em"><i class="icon-smile"></i></p>
 
