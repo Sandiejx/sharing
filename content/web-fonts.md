@@ -78,24 +78,17 @@
     unicode-range: U+2E80-FFFF, U+00-0F;
 }
 ```
-
 ```html
 <h1>font-family & src</h1>
 ```
-
 ```css
 @font-face {
     font-family: 'Ampersand';
-    src: local('Baskerville'), local('Palatino'), local('Book Antiqua');
+    src: local('Baskerville');
     unicode-range: U+26;
 }
-
-h1 {
-    font-family: Ampersand, Arial, sans-serif;
-}
+h1 { font-family: Ampersand, Arial, sans-serif;}
 ```
-
-* [链接]http://newhtml.net/custom-font-stacks-with-unicode-range/
 
 ---
 
@@ -108,7 +101,7 @@ h1 {
 * font-style (normal/italic)
 * font-weight (normal/bold)
 * font-stretch (对当前的字体伸缩变形-暂时没有浏览器支持)
-* unicode-range (定义字体支持的 UNICODE 字符范围。默认是 "U+0-10FFFF")
+* unicode-range (定义字体支持的 UNICODE 字符范围)
 * ...
 
 ---
@@ -135,7 +128,7 @@ h1 {
 @state: black, @fragment
 
 * TrueType(.ttf), OpenType(.ttf, .otf) 
-* Embedded OpenType(.eot) //IE最早支持
+* Embedded OpenType(.eot) 
 * SVG Font(.svg, .svgz)
 * Web Open Font Format(.woff, .woff2)
 
@@ -154,7 +147,7 @@ h1 {
 
 ---
 
-## 作为字体使用
+## Part1 作为字体使用
 
 ---
 
@@ -162,7 +155,7 @@ h1 {
 
 @fragment
 
-* 页面美观、自动适配高清屏(使用户看到的效果和设计一致,更趋向于设计图的效果)
+* 页面美观、自动适配高清屏(更趋向于设计图的效果)
 * 显示生僻字
 * 支持选中、复制、查找、修改方便
 * 对搜索引擎、翻译工具、缩放、无障碍设备原生支持
@@ -219,7 +212,7 @@ h1 {
 
 ---
 
-## 作为 Icon 使用
+## Part2 作为 Icon 使用
 
 ---
 
