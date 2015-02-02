@@ -2,15 +2,6 @@
 
 ---
 
-## 问柏盼
-
-* unicode-range
-* why you`ll love GitHub
-* http://font.qiwoo.org/
-* 在线制作iconfont的几个网站链接
-
----
-
 ## About Me
 
 @state: blue, @fragment
