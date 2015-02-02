@@ -147,7 +147,7 @@ h1 { font-family: Ampersand, Arial, sans-serif;}
 
 ---
 
-## Part1 作为字体使用
+## <span style="color:red;">Part1</span> 作为字体使用
 
 ---
 
@@ -168,7 +168,7 @@ h1 { font-family: Ampersand, Arial, sans-serif;}
 
 * **本地使用**
 * 将拿到的字体转换成兼容浏览器的多个版本
-* 通过 CSS 定义 @font-face 引⽤用对应的字体
+* 通过 CSS 定义 @font-face 引用对应的字体
 
 * **在线字体服务**
 * [Google Fonts] https://www.google.com/fonts
