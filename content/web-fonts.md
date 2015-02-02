@@ -39,7 +39,7 @@
 
 @state: black, @fragment
 
-* 放⼤大缩⼩小不失真
+* 放大缩小不失真
 * 大小，颜色可以在css中设置，配合css3动画效果更佳
 * 可以多次复用
 * [Demo] http://jsbin.com/gababa
@@ -50,7 +50,7 @@
 
 @state: black
 
-* @font-face 不同于其他 CSS 规则是选择器,⽽而是描述⼀一个 Web Font
+* @font-face 不同于其他 CSS 规则的选择器,而是描述一个 Web Font
 
 ```css
 @font-face {
@@ -72,7 +72,7 @@
 	/*IE6+*/
 	url('font.woff') format('woff'),
 	url('font.ttf')  format('truetype'),
-	url('font.svg#svgFontName') format(‘svg');
+	url('font.svg#svgFontName') format('svg');
 }
 ```
 
@@ -83,16 +83,28 @@
 ```css
 @font-face {
     font-family: 'MyFontFamily';
-    src: url('font1.ttf')  format(‘truetype');
+    src: url('font1.ttf')  format('truetype');
     unicode-range: U+2E80-FFFF, U+00-0F;
 }
+```
 
+```html
+<h1>font-family & src</h1>
+```
+
+```css
 @font-face {
-    font-family: 'MyFontFamily';
-    src: url('font2.ttf')  format(‘truetype');
-    unicode-range: U+00F-FFF;
+    font-family: 'Ampersand';
+    src: local('Baskerville'), local('Palatino'), local('Book Antiqua');
+    unicode-range: U+26;
+}
+
+h1 {
+    font-family: Ampersand, Arial, sans-serif;
 }
 ```
+
+* [链接]http://newhtml.net/custom-font-stacks-with-unicode-range/
 
 ---
 
@@ -100,12 +112,12 @@
 
 @state: black, @fragment
 
-* font-family
-* src
-* font-style 
-* font-weight 
-* font-stretch 
-* unicode-range 
+* font-family (name)
+* src (url)
+* font-style (normal/italic)
+* font-weight (normal/bold)
+* font-stretch (对当前的字体伸缩变形-暂时没有浏览器支持)
+* unicode-range (定义字体支持的 UNICODE 字符范围。默认是 "U+0-10FFFF")
 * ...
 
 ---
@@ -140,7 +152,7 @@
 
 ## 浏览器对几种字体的支持情况
 
-图片。。。传上图床
+<img src="http://p2.qhimg.com/t017a48bec10310e61e.png" style="width:900px;">
 
 ---
 
@@ -151,18 +163,22 @@
 
 ---
 
-## 使⽤ Web Fonts 做字体的好处
-
-@fragment
-
-* 页⾯面美观、⾃自动适配⾼高清屏(使⽤用户看到的效果和设计⼀一致,更趋向于设计图的效果)
-* 显⽰示⽣生僻字
-* ⽀支持选中、复制、查找、修改⽅方便
-* 对搜索引擎、翻译⼯工具、缩放、⽆无障碍设备原⽣生⽀支持
+## 作为字体使用
 
 ---
 
-## 使⽤ Web Fonts
+## 使用 Web Fonts 做字体的好处
+
+@fragment
+
+* 页面美观、自动适配高清屏(使用户看到的效果和设计一致,更趋向于设计图的效果)
+* 显示生僻字
+* 支持选中、复制、查找、修改方便
+* 对搜索引擎、翻译工具、缩放、无障碍设备原生支持
+
+---
+
+## 使用 Web Fonts
 
 @fragment
 
@@ -173,7 +189,7 @@
 * **在线字体服务**
 * [Google Fonts] https://www.google.com/fonts
 * [Just Font] http://cn.justfont.com/
-* [有字库	] http://www.youziku.com/
+* [有字库] http://www.youziku.com/
 
 ---
 
@@ -182,12 +198,12 @@
 @fragment
 
 ```html
-<h2 class=“title”>我是使用了 Web Fonts 的标题</h2>
+<h2 class="title">我是使用了 Web Fonts 的标题</h2>
 ```
 
 ```css
 .title {
-    font-family: ‘myFontFamily’;
+    font-family: 'myFontFamily';
 }
 ```
 
@@ -198,7 +214,7 @@
 @fragment
 
 * 版权问题（盗版、授权费、授权费）
-* 中文字体的问题（文件庞大-好几MB，字体转换）
+* 中文字体的问题（文件庞大-好几MB）
 
 ---
 
@@ -206,11 +222,9 @@
 
 @fragment
 
-* 字体⼦子集 (embedded subset)
-* 字蛛 http://font-spider.org/
-* 显⽰示⽣生僻字
-* http://font.qiwoo.org/
-* Fontforge、ttf2eot、sfnt2woff、woff2_compress
+* [字蛛] http://font-spider.org/
+* [Qiwoo Fonts] http://font.qiwoo.org/
+* [Font Squirrel] http://www.fontsquirrel.com/tools/webfont-generator
 
 ---
 
@@ -232,7 +246,7 @@
 ## Icon Fonts 的使用
 
 ```html
-<h2><span class=“icon icon-name”></span>IconFonts</h2>
+<h2><span class="icon icon-name"></span>IconFonts</h2>
 ```
 
 ```css
@@ -244,19 +258,19 @@
 .icon-name:before {
      content: "\e900";
 }
-demo(jsbin) cart
 ```
+[Demo] http://jsbin.com/nabuhe/2/
 
 ---
 
 ## 自己制作的Icon
 
-* **设计师提供⽮矢量图 - SVG 格式**
+* **设计师提供矢量图 - SVG 格式**
 * 对齐到像素
 * 曲线闭合
 * 色彩填充
 
-* **在线导⼊,制作**
+* **在线导入,制作**
 * Icomoon
 * Iconfont
 * foontello
