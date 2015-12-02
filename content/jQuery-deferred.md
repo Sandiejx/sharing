@@ -1,37 +1,35 @@
-# 《关于deferred对象的简单介绍》
+# 关于deferred对象的简单介绍
 
 ---
 
-## About Me
-
 @state: blue, @fragment
 
-* **Sandyxjiang**
+## About Me
+
+* Sandyxjiang
 * ISUX - UI开发
 * Qlippie项目组
 
 ---
 
-## 简介
+@state: black, @fragment
 
-@state: blue, @fragment
+## 简介
 
 * 从jQuery 1.5.0版本开始引入deferred对象
 * 彻底改变了如何在jQuery中使用ajax
 
 ---
 
-## 什么是deferred对象
+@state: black, @fragment
 
-@state: blue, @fragment
+## 什么是deferred对象
 
 * 同步操作 -> eg.遍历一个大型数组
 * 异步操作 -> eg.ajax读取服务器数据
 
 * 回调函数(callback)
-
 * 但是在回调函数方面，jQuery的功能非常弱。为了改变这一点，jQuery开发团队就设计了deferred对象。
-
 **简单说，deferred对象就是jQuery的回调函数解决方案。**
 
 ---
@@ -39,6 +37,8 @@
 ## ajax操作的链式写法
 
 ---
+
+@state: black, @fragment
 
 ## jQuery的ajax操作的传统写法
 
@@ -58,12 +58,16 @@ $.ajax({
 
 ---
 
+@state: black, @fragment
+
 ## $.ajax()返回的对象
 
 * jQuery版本低于1.5.0，返回XHR对象，不能进行链式操作。
 * jQuery版本高于1.5.0，返回deferred对象，可以进行链式操作。
 
 ---
+
+@state: black, @fragment
 
 ## 新的写法
 
@@ -82,6 +86,8 @@ $.ajax({
 
 ---
 
+@state: black, @fragment
+
 ## 指定多个回调函数
 
 * deferred对象允许你自由添加多个回调函数
@@ -98,6 +104,8 @@ $.ajax({
 
 ---
 
+@state: black, @fragment
+
 ## 为多个操作指定回调函数
 
 * deferred 对象允许你为多个事件指定一个回调函数，这是传统写法做不到的。 
@@ -113,6 +121,8 @@ $.ajax({
 * Tips:这段代码的意思是，先执行两个操作 $.ajax("test1.html") 和 $.ajax("test2.html") ，如果都成功了，就运行 done() 指定的回调函数；如果有一个失败或都失败了，就执行 fail() 指定的回调函数。
 
 ---
+
+@state: black, @fragment
 
 ## 普通操作的回调函数接口（上）
 
@@ -160,6 +170,8 @@ $.ajax({
 
 ---
 
+@state: black, @fragment
+
 ## deferred.resolve()方法和deferred.reject()方法
 
 * jQuery 规定， deferred 对象有三种执行状态—— 未完成 ， 已完成 和 已失败 。
@@ -171,6 +183,8 @@ $.ajax({
 * 这两种方法可以用于程序员对 deferred对象 进行手动指定 执行状态 ，从而触发 done() , fail() 方法。
 
 ---
+
+@state: black, @fragment
 
 ## deferred.promise()方法
 
@@ -198,6 +212,8 @@ $.ajax({
 以上代码在尾部加了一行 dtd.resolve(); ，直接改变了 dtd 对象的执行状态，导致 done() 方法立刻执行，跳出 “哈哈，成功了！” 的提示框，等5秒之后再跳出 “执行完毕！” 的提示框。
 
 ---
+
+@state: black, @fragment
 
 ## deferred.promise()方法
 
@@ -236,6 +252,8 @@ $.ajax({
 
 ---
 
+@state: black, @fragment
+
 ## deferred.promise()方法
 
 * 但是，更好的写法应该是，将 dtd对象 变成 wait()函数 的内部对象：
@@ -258,6 +276,9 @@ $.ajax({
 * [Demo9] http://jsfiddle.net/q9TvT/
 
 ---
+
+@state: black, @fragment
+
 ## 普通操作的回调函数接口（中）
 
 * 另一种防止执行状态被外部改变的方法，是使用 deferred对象 的建构函数 $.Deferred() ，直接把 wait() 传入：
@@ -272,6 +293,8 @@ Tips:
 * jQuery 规定， $.Deferred() 可以接受一个函数名（注意，是函数名）作为参数， $.Deferred() 所生成的 deferred对象 将作为这个函数的默认参数，并执行。
 
 ---
+
+@state: black, @fragment
 
 ## 普通操作的回调函数接口（下）
 
@@ -298,7 +321,7 @@ Tips:
 
 ---
 
-@fragment
+@state: black, @fragment
 
 ## 总结
 
