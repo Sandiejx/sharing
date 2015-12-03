@@ -354,16 +354,16 @@ $.ajax( "test.html" )
 
 <style type="text/css">
 .reveal h1 {font-size:26px;}
-.reveal h2 {font-size:24em;}
+.reveal h2 {font-size:24px;}
 .reveal img {max-width:100%;}
 .reveal a:not(.image) { color: #ccc; color: rgba(255,255,255,0.8); }
 .reveal a:not(.image):hover { color: #fff; }
-.reveal .overlay {display:inline-block;width:auto;background:rgba(0,0,0,0.5);padding:0.3em 1em;margin:0;line-height:1;font-size:1em}
-.reveal .slides section .fragment{font-size:20em;}
+.reveal .overlay {display:inline-block;width:auto;background:rgba(0,0,0,0.5);padding:2px 8px;margin:0;line-height:1;font-size:20px;}
+.reveal .slides section .fragment{font-size:20px;}
 
 .browser-support {display: table; margin-top:1em!important;}
 .browser-support img {display: block; margin: 0 auto}
-.browser-support li {display: table-cell; vertical-align:top; text-align: center;font-size:1em; box-sizing:border-box;padding:0 0.2em;}
+.browser-support li {display: table-cell; vertical-align:top; text-align: center;font-size:20px; box-sizing:border-box;padding:0 3px;}
 :not(pre) > code[class*="language-"], pre[class*="language-"]{
 	font-size: 22px;
 }
