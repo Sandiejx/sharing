@@ -1,6 +1,12 @@
 # 关于deferred对象的简单介绍
 
 ---
+看这个 rockywen
+http://km.oa.com/group/15849/articles/show/246736
+http://km.oa.com/articles/show/258206
+http://km.oa.com/articles/show/247455
+http://km.oa.com/articles/show/261985
+---
 
 @state: blue, @fragment
 
@@ -115,7 +121,7 @@ $.ajax({
 ```
 
 * 引入一个新的方法*$.when()*
-* deferred 对象允许你为多个事件指定一个回调函数，这是传统写法做不到的
+* deferred 对象允许你为多个事件指定一个回调函数
 * [Demo4](http://jsfiddle.net/ruanyf/CdKjn/)
 
 ---
@@ -369,14 +375,14 @@ $.ajax( "test.html" )
 
 
 <style type="text/css">
-.reveal h1 {font-size:2.4em;}
-.reveal h2 {font-size:1.6em;}
+.reveal h1 {font-size:2em;}
+.reveal h2 {font-size:1em;}
 .reveal img {max-width:100%;}
 .reveal a:not(.image) { color: #ccc; color: rgba(255,255,255,0.8); }
 .reveal a:not(.image):hover { color: #fff; }
-.reveal .overlay {display:inline-block;width:auto;background:rgba(0,0,0,0.5);padding:0.5em 1em;margin:0;line-height:1.6;font-size:1.5em}
+.reveal .overlay {display:inline-block;width:auto;background:rgba(0,0,0,0.5);padding:0.3em 1em;margin:0;line-height:1;font-size:1em}
 
-.browser-support {display: table; margin-top:2em!important;}
+.browser-support {display: table; margin-top:1em!important;}
 .browser-support img {display: block; margin: 0 auto}
-.browser-support li {display: table-cell; vertical-align:top; text-align: center;font-size:1.5em; box-sizing:border-box;padding:0 0.2em;}
+.browser-support li {display: table-cell; vertical-align:top; text-align: center;font-size:1em; box-sizing:border-box;padding:0 0.2em;}
 </style>
