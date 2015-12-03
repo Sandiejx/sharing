@@ -328,6 +328,13 @@ $.ajax({
 * deferred.resolve() 手动改变 deferred对象 的运行状态为 "已完成" ，从而立即触发 done() 方法。
 * deferred.reject() 手动改变 deferred对象 的运行状态为 "已失败" ，从而立即触发 fail() 方法。
 * $.when() 为多个操作指定回调函数。
+
+---
+
+@state: black, @fragment
+
+## 总结
+
 * deferred.then() ,可以把 done() 和 fail()一起写
 ```javascript
 	$.when($.ajax( "/main.php" ))
@@ -365,6 +372,6 @@ $.ajax( "test.html" )
 .browser-support img {display: block; margin: 0 auto}
 .browser-support li {display: table-cell; vertical-align:top; text-align: center;font-size:20px; box-sizing:border-box;padding:0 3px;}
 pre[class*="language-"]{
-	font-size: 12px;
+	font-size: 26px;
 }
 </style>
