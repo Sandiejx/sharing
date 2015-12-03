@@ -345,6 +345,7 @@ $.ajax({
 * deferred.always() 方法也是用来指定回调函数的，它的作用是，不管调用的是 
 * deferred.resolve() 还是 deferred.reject() ，最后总是执行。
 
+*
 ```javascript
 $.ajax( "test.html" )
 　　.always( function() { alert("已执行！");} );
