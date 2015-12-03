@@ -1,13 +1,6 @@
 # 关于deferred对象的简单介绍
 
 ---
-看这个 rockywen
-http://km.oa.com/group/15849/articles/show/246736
-http://km.oa.com/articles/show/258206
-http://km.oa.com/articles/show/247455
-http://km.oa.com/articles/show/261985
----
-
 @state: blue, @fragment
 
 ## About Me
