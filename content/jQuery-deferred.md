@@ -353,8 +353,8 @@ $.ajax( "test.html" )
 
 
 <style type="text/css">
-.reveal h1 {font-size:26px;}
-.reveal h2 {font-size:24px;}
+.reveal h1 {font-size:34px;}
+.reveal h2 {font-size:30px;}
 .reveal img {max-width:100%;}
 .reveal a:not(.image) { color: #ccc; color: rgba(255,255,255,0.8); }
 .reveal a:not(.image):hover { color: #fff; }
@@ -364,7 +364,8 @@ $.ajax( "test.html" )
 .browser-support {display: table; margin-top:1em!important;}
 .browser-support img {display: block; margin: 0 auto}
 .browser-support li {display: table-cell; vertical-align:top; text-align: center;font-size:20px; box-sizing:border-box;padding:0 3px;}
-:not(pre) > code[class*="language-"], pre[class*="language-"]{
+code[class*="language-"],
+pre[class*="language-"]{
 	font-size: 22px;
 }
 </style>
