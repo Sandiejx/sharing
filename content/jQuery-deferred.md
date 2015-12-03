@@ -309,9 +309,9 @@ $.ajax({
 	    .fail(function(){ alert("出错啦！"); });
 	wait(dtd);
 ```
-* [Demo11](http://jsfiddle.net/ruanyf/PF7Xf/)
-* 这里的关键是 dtd.promise(wait) 这一行
-* 它的作用就是在 wait对象 上只部署*Deferred接口*但不执行
+* dtd.promise(wait)，在wait对象上只部署*Deferred接口*但不执行
+* [Demo11](http://jsfiddle.net/ruanyf/PF7Xf/)这里的关键是 dtd.promise(wait) 这一行
+
 
 ---
 
@@ -365,6 +365,6 @@ $.ajax( "test.html" )
 .browser-support img {display: block; margin: 0 auto}
 .browser-support li {display: table-cell; vertical-align:top; text-align: center;font-size:20px; box-sizing:border-box;padding:0 3px;}
 pre[class*="language-"]{
-	font-size: 26px;
+	font-size: 12px;
 }
 </style>
