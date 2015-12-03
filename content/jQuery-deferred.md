@@ -131,7 +131,6 @@ $.ajax({
 　　 	};
 　　 setTimeout(tasks,5000);
 
-	//指定回调函数
 	$.when(wait())
 	　　.done(function(){ alert("哈哈，成功了！"); })
 	　　.fail(function(){ alert("出错啦！"); });
@@ -141,7 +140,6 @@ $.ajax({
 > 统一了编程接口
 > ajax操作 & 本地操作 
 > 异步操作 & 同步操作
-
 * [Demo5] http://jsfiddle.net/5wzrt/
 
 ---
@@ -155,19 +153,14 @@ $.ajax({
 ```javascript
 	var dtd = $.Defferred();
 	function wait(dtd){
-
 	    var task = function(){
 	        alert("执行完毕！");
 	        dtd.resolve();    
 	    };
-
 	    setTimeout(tasks,5000);
 	    return dtd;
 	}
-
-
-	//现在， wait() 函数返回的是 deferred 对象，这就可以加上链式操作了。
-	$.when(wait(dtd))
+	$.when(wait(dtd))//wait()函数返回的是deferred对象，可以加上链式操作
 　　     .done(function(){ alert("哈哈，成功了！"); })
 　　	    .fail(function(){ alert("出错啦！"); });
 	
@@ -204,15 +197,11 @@ $.ajax({
 	　　setTimeout(tasks,5000);
 	　　return dtd;
 	};
-
 	$.when(wait(dtd))
 	    .done(function(){ alert("哈哈，成功了！"); })
 	    .fail(function(){ alert("出错啦！"); });
-
-	//加了一个resolve方法
-	dtd.resolve();
+	dtd.resolve();//加了一个resolve方法
 ```
-
 * dtd.resolve()直接改变了dtd对象的执行状态，导致done()方法立刻执行
 * [Demo7](http://jsfiddle.net/nBFse/)
 
@@ -223,14 +212,11 @@ $.ajax({
 ## deferred.promise()方法（二）
 
 *为了避免这种情况， jQuery 提供了 deferred.promise() 方法。
-
 *它的作用是:
-
 > 在原来的*deferred对象*上返回另一个deferred对象
 > 只开放与改变执行状态无关的方法（比如done()方法和fail()方法）
 > 屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法）
 > 从而使得执行状态不能被改变
-
 
 ---
 
@@ -245,7 +231,6 @@ $.ajax({
 	 　　　　alert("执行完毕！");
 	 　　　　dtd.resolve(); // 改变Deferred对象的执行状态
 	 　　};
-
 	　　　setTimeout(tasks,5000);
 	　　　return dtd.promise(); // 返回promise对象
 	};
@@ -253,11 +238,9 @@ $.ajax({
 	$.when(d)
 	    .done(function(){ alert("哈哈，成功了！"); })
 	    .fail(function(){ alert("出错啦！"); });
-
 	d.resolve(); // 此时，这个语句是无效的
 ```
 * [Demo8](http://jsfiddle.net/Yur4R/)
-
 * wait()函数返回的是promise对象
 * promise对象不支持resolve方法和reject方法，无法改变这个对象的执行状态
 
@@ -309,7 +292,7 @@ $.ajax({
 
 ## 普通操作的回调函数接口（下）
 
-* 除了上面两种方法以外，我们还可以直接在 wait对象 上部署 deferred 接口：
+除了上面两种方法以外，我们还可以直接在 wait对象 上部署 deferred 接口：
 
 ```javascript
 	var dtd = $.Deferred(); // 生成Deferred对象
@@ -370,7 +353,7 @@ $.ajax( "test.html" )
 
 <style type="text/css">
 .reveal h1 {font-size:2em;}
-.reveal h2 {font-size:1em;}
+.reveal h2 {font-size:1.5em;}
 .reveal img {max-width:100%;}
 .reveal a:not(.image) { color: #ccc; color: rgba(255,255,255,0.8); }
 .reveal a:not(.image):hover { color: #fff; }
@@ -379,4 +362,7 @@ $.ajax( "test.html" )
 .browser-support {display: table; margin-top:1em!important;}
 .browser-support img {display: block; margin: 0 auto}
 .browser-support li {display: table-cell; vertical-align:top; text-align: center;font-size:1em; box-sizing:border-box;padding:0 0.2em;}
+:not(pre) > code[class*="language-"], pre[class*="language-"]{
+	font-size: 1em;
+}
 </style>
