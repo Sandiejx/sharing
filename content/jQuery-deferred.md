@@ -1,6 +1,7 @@
 # 关于deferred对象的简单介绍
 
 ---
+
 @state: blue, @fragment
 
 ## About Me
@@ -210,7 +211,8 @@ $.ajax({
 
 ## deferred.promise()方法（二）
 
-*为了避免这种情况， jQuery 提供了 deferred.promise() 方法。
+为了避免deferred对象被改变状态，提供了deferred.promise()方法
+
 *它的作用是:
 > 在原来的*deferred对象*上返回另一个deferred对象
 > 只开放与改变执行状态无关的方法（比如done()方法和fail()方法）
@@ -351,18 +353,18 @@ $.ajax( "test.html" )
 
 
 <style type="text/css">
-.reveal h1 {font-size:2em;}
-.reveal h2 {font-size:1.5em;}
+.reveal h1 {font-size:26px;}
+.reveal h2 {font-size:24em;}
 .reveal img {max-width:100%;}
 .reveal a:not(.image) { color: #ccc; color: rgba(255,255,255,0.8); }
 .reveal a:not(.image):hover { color: #fff; }
 .reveal .overlay {display:inline-block;width:auto;background:rgba(0,0,0,0.5);padding:0.3em 1em;margin:0;line-height:1;font-size:1em}
-.reveal .slides section .fragment{font-size:1em;}
+.reveal .slides section .fragment{font-size:20em;}
 
 .browser-support {display: table; margin-top:1em!important;}
 .browser-support img {display: block; margin: 0 auto}
 .browser-support li {display: table-cell; vertical-align:top; text-align: center;font-size:1em; box-sizing:border-box;padding:0 0.2em;}
 :not(pre) > code[class*="language-"], pre[class*="language-"]{
-	font-size: 1em;
+	font-size: 22px;
 }
 </style>
