@@ -213,6 +213,7 @@ deferred对象的优点：
 为了避免deferred对象被改变状态，提供了deferred.promise()方法
 
 它的作用是:
+
 * 在原来的*deferred对象*上返回另一个deferred对象
 * 只开放与改变执行状态无关的方法（比如done()方法和fail()方法）
 * 屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法）
@@ -241,8 +242,8 @@ deferred对象的优点：
 	d.resolve(); // 此时，这个语句是无效的
 ```
 * [Demo8](http://jsfiddle.net/Yur4R/)
-* wait()函数返回的是promise对象
-* promise对象不支持resolve方法和reject方法，无法改变这个对象的执行状态
+* *wait()函*数返回的是*promise对象*
+* *promise对象*不支持*resolve*方法和*reject*方法，无法改变这个对象的*执行状态*
 
 ---
 
@@ -275,6 +276,7 @@ deferred对象的优点：
 ## 普通操作的回调函数接口（中）
 
 另一种防止执行状态被外部改变的方法：
+
 *使用 deferred对象的建构函数*$.Deferred()*，直接把*wait()*传入
 
 ```javascript
@@ -292,7 +294,7 @@ deferred对象的优点：
 
 ## 普通操作的回调函数接口（下）
 
-除了上面两种方法以外，我们还可以直接在 wait对象 上部署 deferred 接口：
+除了上面两种方法以外，我们还可以直接在 *wait对象* 上部署 *deferred接口*：
 
 ```javascript
 	var dtd = $.Deferred(); // 生成Deferred对象
@@ -342,7 +344,7 @@ deferred对象的优点：
 * >如果 *then()* 有两个参数，那么第一个参数是 *done()* 方法的回调函数，第二个参数是 *fail()* 方法的回调方法。
 * >如果 *then()* 只有一个参数，那么等同于 *done()* 
 * *deferred.always()* 方法也是用来指定回调函数的，它的作用是，不管调用的是 
-* deferred.resolve() 还是 deferred.reject() ，最后总是执行。
+* *deferred.resolve()* 还是 *deferred.reject()* ，最后总是执行。
 
 ```javascript
 $.ajax( "test.html" )
