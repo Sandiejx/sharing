@@ -95,7 +95,7 @@ $.ajax({
 	$.ajax("test.html")
 　　 	.done(function(){ alert("哈哈，成功了！");} )
 　　 	.fail(function(){ alert("出错啦！"); } )
-　　		.done(function(){ alert("第二个回调函数！");} );
+　　	.done(function(){ alert("第二个回调函数！");} );
 ```
 * deferred对象允许你自由添加*多个*回调函数
 * 回调函数可以添加任意多个，它们按照*添加顺序*执行
@@ -110,12 +110,12 @@ $.ajax({
 
 ```javascript
 	$.when($.ajax("test1.html"), $.ajax("test2.html"))
-　　	 	.done(function(){ alert("哈哈，成功了！"); })
-　　		.fail(function(){ alert("出错啦！"); });
+　　	 .done(function(){ alert("哈哈，成功了！"); })
+　　	 .fail(function(){ alert("出错啦！"); });
 ```
 
 * 引入一个新的方法*$.when()*
-* deferred 对象允许你为多个事件指定一个回调函数
+* deferred 对象允许你为*多个事件*指定一个回调函数
 * [Demo4](http://jsfiddle.net/ruanyf/CdKjn/)
 
 ---
@@ -127,7 +127,7 @@ $.ajax({
 ```javascript
 	var wait = function(){
 　 　	var tasks = function(){
-　　　　		alert("执行完毕！");
+　　　　alert("执行完毕！");
 　　 	};
 　　 setTimeout(tasks,5000);
 
@@ -162,7 +162,7 @@ $.ajax({
 	}
 	$.when(wait(dtd))//wait()函数返回的是deferred对象，可以加上链式操作
 　　     .done(function(){ alert("哈哈，成功了！"); })
-　　	    .fail(function(){ alert("出错啦！"); });
+　　	 .fail(function(){ alert("出错啦！"); });
 	
 ```
 * [Demo6](http://jsfiddle.net/gfFPj/)
@@ -173,11 +173,10 @@ $.ajax({
 
 ## deferred.resolve()方法和deferred.reject()方法
 
-* deferred 对象有三种执行状态 —— *未完成* ， *已完成* 和 *已失败* 。
-
-* 如果执行状态是*已完成(resolved)*，调用*done()*方法指定的回调函数；
-* 如果执行状态是*已失败(rejected)*，调用*fail()*方法指定的回调函数；
-* 如果执行状态是*未完成* ，则继续等待，或者调用*progress()*方法指定的回调函数（jQuery1.7版本添加）。
+* deferred对象有三种执行状态——*未完成*、*已完成*、*已失败*： 
+> 如果执行状态是*已完成(resolved)*，调用*done()*方法指定的回调函数
+> 如果执行状态是*已失败(rejected)*，调用*fail()*方法指定的回调函数
+> 如果执行状态是*未完成* ，则继续等待，或者调用*progress()*方法指定的回调函数（jQuery1.7版本添加）
 
 * 这两种方法可以用于程序员对*deferred对象*进行手动指定*执行状态*，从而触发done(),fail()方法。
 
@@ -213,11 +212,11 @@ $.ajax({
 
 为了避免deferred对象被改变状态，提供了deferred.promise()方法
 
-*它的作用是:
-> 在原来的*deferred对象*上返回另一个deferred对象
-> 只开放与改变执行状态无关的方法（比如done()方法和fail()方法）
-> 屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法）
-> 从而使得执行状态不能被改变
+* > 它的作用是:
+* > 在原来的*deferred对象*上返回另一个deferred对象
+* > 只开放与改变执行状态无关的方法（比如done()方法和fail()方法）
+* > 屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法）
+* > 从而使得执行状态不能被改变
 
 ---
 
@@ -345,7 +344,6 @@ $.ajax({
 * deferred.always() 方法也是用来指定回调函数的，它的作用是，不管调用的是 
 * deferred.resolve() 还是 deferred.reject() ，最后总是执行。
 
-*
 ```javascript
 $.ajax( "test.html" )
 　　.always( function() { alert("已执行！");} );
