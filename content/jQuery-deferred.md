@@ -67,8 +67,8 @@ $.ajax({
 
 ## $.ajax()返回的对象
 
-* jQuery版本低于1.5.0，返回XHR对象，不能进行链式操作。
-* jQuery版本高于1.5.0，返回deferred对象，可以进行链式操作。
+* jQuery版本低于1.5.0，返回XHR对象，不能进行链式操作
+* jQuery版本高于1.5.0，返回deferred对象，可以进行链式操作
 
 ---
 
@@ -136,10 +136,10 @@ $.ajax({
 	　　.fail(function(){ alert("出错啦！"); });
 	};
 ```
-* deferred对象的优点：
-> 统一了编程接口
-> ajax操作 & 本地操作 
-> 异步操作 & 同步操作
+deferred对象的优点：
+* 统一了编程接口
+* ajax操作 & 本地操作 
+* 异步操作 & 同步操作
 * [Demo5] http://jsfiddle.net/5wzrt/
 
 ---
@@ -174,11 +174,10 @@ $.ajax({
 ## deferred.resolve()方法和deferred.reject()方法
 
 * deferred对象有三种执行状态——*未完成*、*已完成*、*已失败*： 
-> 如果执行状态是*已完成(resolved)*，调用*done()*方法指定的回调函数
-> 如果执行状态是*已失败(rejected)*，调用*fail()*方法指定的回调函数
-> 如果执行状态是*未完成* ，则继续等待，或者调用*progress()*方法指定的回调函数（jQuery1.7版本添加）
-
-* 这两种方法可以用于程序员对*deferred对象*进行手动指定*执行状态*，从而触发done(),fail()方法。
+* 如果执行状态是*已完成(resolved)*，调用*done()*方法指定的回调函数
+* 如果执行状态是*已失败(rejected)*，调用*fail()*方法指定的回调函数
+* 如果执行状态是*未完成* ，则继续等待，或者调用*progress()*方法指定的回调函数（jQuery1.7版本添加）
+* 这两种方法可以用于程序员对*deferred对象*进行手动指定*执行状态*，从而触发done(),fail()方法
 
 ---
 
@@ -211,11 +210,12 @@ $.ajax({
 ## deferred.promise()方法（二）
 
 为了避免deferred对象被改变状态，提供了deferred.promise()方法
+
 它的作用是:
-* > 在原来的*deferred对象*上返回另一个deferred对象
-* > 只开放与改变执行状态无关的方法（比如done()方法和fail()方法）
-* > 屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法）
-* > 从而使得执行状态不能被改变
+* 在原来的*deferred对象*上返回另一个deferred对象
+* 只开放与改变执行状态无关的方法（比如done()方法和fail()方法）
+* 屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法）
+* 从而使得执行状态不能被改变
 
 ---
 
@@ -273,7 +273,8 @@ $.ajax({
 
 ## 普通操作的回调函数接口（中）
 
-另一种防止执行状态被外部改变的方法，是使用 deferred对象 的建构函数 $.Deferred() ，直接把 wait() 传入：
+另一种防止执行状态被外部改变的方法：
+*使用 deferred对象的建构函数*$.Deferred()*，直接把*wait()*传入
 
 ```javascript
 	$.Deferred(wait)
@@ -281,8 +282,8 @@ $.ajax({
 	　　	.fail(function(){ alert("出错啦！"); });
 ```
 * [Demo10](http://jsfiddle.net/ruanyf/CucGp/)
-* $.Deferred()可以接受一个函数名（注意，是函数名）作为参数
-* $.Deferred()所生成的*deferred对象*将作为这个函数的默认参数并执行
+* *$.Deferred()*可以接受一个函数名（注意，是函数名）作为参数
+* *$.Deferred()*所生成的*deferred对象*将作为这个函数的默认参数并执行
 
 ---
 
@@ -308,7 +309,7 @@ $.ajax({
 ```
 * *dtd.promise(wait)*，在wait对象上只部署*Deferred接口*但不执行
 * 这里的关键是*dtd.promise(wait)*这一行
-* [Demo11](http://jsfiddle.net/ruanyf/PF7Xf/)
+* *[Demo11](http://jsfiddle.net/ruanyf/PF7Xf/)*
 
 ---
 
@@ -320,10 +321,8 @@ $.ajax({
 * *deferred.done()* 指定操作 *成功* 时的回调函数
 * *deferred.fail()* 指定操作 *失败* 时的回调函数
 * *deferred.promise()* 
->
- *没有参数时，返回一个新的 deferred对象 ，该对象的运行状态无法被改变
- *接受参数时，作用为在参数对象上部署 deferred接口
->
+ * >没有参数时，返回一个新的 deferred对象 ，该对象的运行状态无法被改变
+ * >接受参数时，作用为在参数对象上部署 deferred接口
 * *deferred.resolve()* 手动改变 *deferred对象* 的运行状态为 "*已完成*" ，从而立即触发 *done()* 方法。
 * *deferred.reject()* 手动改变 *deferred对象* 的运行状态为 "*已失败*" ，从而立即触发 *fail()* 方法。
 * *$.when()* 为多个操作指定回调函数。
@@ -339,8 +338,8 @@ $.ajax({
 	$.when($.ajax( "/main.php" ))
 	　　.then(successFunc, failureFunc );
 ```
-> 如果 *then()* 有两个参数，那么第一个参数是 *done()* 方法的回调函数，第二个参数是 *fail()* 方法的回调方法。
-> 如果 *then()* 只有一个参数，那么等同于 *done()* 
+* >如果 *then()* 有两个参数，那么第一个参数是 *done()* 方法的回调函数，第二个参数是 *fail()* 方法的回调方法。
+* >如果 *then()* 只有一个参数，那么等同于 *done()* 
 * *deferred.always()* 方法也是用来指定回调函数的，它的作用是，不管调用的是 
 * deferred.resolve() 还是 deferred.reject() ，最后总是执行。
 
