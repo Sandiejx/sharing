@@ -141,7 +141,7 @@ deferred对象的优点：
 * 统一了编程接口
 * ajax操作 & 本地操作 
 * 异步操作 & 同步操作
-* [Demo5] http://jsfiddle.net/5wzrt/
+* [Demo5](http://jsfiddle.net/5wzrt/)
 
 ---
 
