@@ -10,7 +10,7 @@
 .reveal .slides h4,
 .reveal .slides p,
 .reveal .slides li {
-    font-family: "STHeiti Light";
+    font-family: "Segoe UI Light", "Microsoft Jhenghei", Simhei, sans-serif;
 }
 .self-intro .head {
     display: inline-block;
