@@ -10,7 +10,7 @@
 .reveal .slides h4,
 .reveal .slides p,
 .reveal .slides li {
-    font-family: Helvetica;
+    font-family: STHeiti Light;
 }
 .self-intro .head {
     display: inline-block;
@@ -416,21 +416,15 @@ $.ajax( "test.html" )
 
 <p style="font-size:6em"><i class="icon-smile"></i></p>
 
-
-
 <style type="text/css">
-.reveal h1 {font-size:34px;}
-.reveal h2 {font-size:30px;}
+.reveal h1 {font-size:2.4em;}
+.reveal h2 {font-size:1.6em;}
 .reveal img {max-width:100%;}
 .reveal a:not(.image) { color: #ccc; color: rgba(255,255,255,0.8); }
 .reveal a:not(.image):hover { color: #fff; }
-.reveal .overlay {display:inline-block;width:auto;background:rgba(0,0,0,0.5);padding:2px 8px;margin:0;line-height:1;font-size:24px;}
-.reveal .slides section .fragment{font-size:24px;}
+.reveal .overlay {display:inline-block;width:auto;background:rgba(0,0,0,0.5);padding:0.5em 1em;margin:0;line-height:1.6;font-size:1.5em}
 
-.browser-support {display: table; margin-top:1em!important;}
+.browser-support {display: table; margin-top:2em!important;}
 .browser-support img {display: block; margin: 0 auto}
-.browser-support li {display: table-cell; vertical-align:top; text-align: center;font-size:20px; box-sizing:border-box;padding:0 3px;}
-pre[class*="language-"]{
-	font-size: 26px;
-}
+.browser-support li {display: table-cell; vertical-align:top; text-align: center;font-size:1.5em; box-sizing:border-box;padding:0 0.2em;}
 </style>
