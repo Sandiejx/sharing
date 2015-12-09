@@ -417,7 +417,7 @@ img{
     background: url(img/deferred/head.jpg) no-repeat 88% 39%;
     background-size: cover;
 }
-</img>
+</style>
 <img src="img/deferred/me.jpg" alt="" />
 ## THANK YOU ~ ^。^
 ### Q & A
