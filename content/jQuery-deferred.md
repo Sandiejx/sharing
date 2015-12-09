@@ -407,8 +407,8 @@ $.ajax( "test.html" )
 　　.always( function() { alert("已执行！");} );
 ```
 ---
-
 @state: blue
+<style type="text/css">
 img{
     display: inline-block;
     width: 150px;
@@ -417,6 +417,7 @@ img{
     background: url(img/deferred/head.jpg) no-repeat 88% 39%;
     background-size: cover;
 }
+</img>
 <img src="img/deferred/me.jpg" alt="" />
 ## THANK YOU ~ ^。^
 ### Q & A
