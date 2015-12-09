@@ -9,6 +9,11 @@
 
 @state: blue, @fragment
 <style type="text/css">
+.reveal li ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+    font-size: 0.8em;
+}
 .self-intro .head {
     display: inline-block;
     width: 150px;
