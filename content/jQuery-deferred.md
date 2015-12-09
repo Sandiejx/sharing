@@ -9,14 +9,6 @@
 
 @state: blue, @fragment
 <style type="text/css">
-.reveal .slides h1,
-.reveal .slides h2,
-.reveal .slides h3,
-.reveal .slides h4,
-.reveal .slides p,
-.reveal .slides li {
-    font-family: "Segoe UI Light", "Microsoft Jhenghei", Simhei, sans-serif;
-}
 .self-intro .head {
     display: inline-block;
     width: 150px;
@@ -30,34 +22,6 @@
     padding-left: 30px;
     position: relative;
     top: -45px;
-}
-.contact-list .fa{
-    font-size: 46px; 
-    padding-right: 10px;
-}
-
-.contact-list a {
-    color: white;
-}
-.reveal .wc-title {
-    color: #999;
-}
-.initial-web {
-    color: #0099CC;
-}
-.initial-component {
-    color: #669900;
-}
-.reveal .slides .today {
-    color: rgb(206, 21, 21);
-    font-size: 184px;
-    border: 8px solid rgb(206, 21, 21);
-    padding: 100px;
-    -webkit-transform: rotate(20deg);
-    display: block;
-    position: relative;
-    top: -230px;
-    background: rgba(255, 255, 255, 0.5);
 }
 </style>
 
