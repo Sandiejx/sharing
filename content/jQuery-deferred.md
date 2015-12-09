@@ -3,7 +3,7 @@
     <h1 style="margin:0;padding:0;line-height:3">关于Deferred对象简单介绍</h1>
 </div>
 
-@bg: img/deferred/cover.jpg, @bgColor: #eee
+@bg: /img/deferred/cover.jpg, @bgColor: #eee
 
 ---
 
@@ -60,8 +60,6 @@
     background: rgba(255, 255, 255, 0.5);
 }
 </style>
-
-<link rel="stylesheet" href="css/slides/high_performance_animation.css" />
 
 <div class="self-intro">
     <span class="head"></span>
