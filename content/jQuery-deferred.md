@@ -125,8 +125,15 @@ $.ajax({
 
 ## $.ajax()返回的对象
 
-* jQuery版本低于1.5.0，返回*XHR对象*，*不能*进行链式操作
-* jQuery版本高于1.5.0，返回*deferred对象*，*可以*进行链式操作
+```javascript
+    if(jQuery1.5.0+){
+    	//deferred对象可以进行链式操作
+    	return deferred;
+    }else{
+    	//XHR对象不能进行链式操作
+    	return XmlHttpRequest;
+    }
+```
 
 ---
 
@@ -185,9 +192,9 @@ $.ajax({
 ```javascript
 	var wait = function(){
 　 　	var tasks = function(){
-　　　　alert("执行完毕！");
+　　　　	alert("执行完毕！");
 　　 	};
-　　 setTimeout(tasks,5000);
+　　 	setTimeout(tasks,5000);
 
 	$.when(wait())
 	　　.done(function(){ alert("哈哈，成功了！"); })
@@ -235,7 +242,7 @@ deferred对象的优点：
 * 如果执行状态是*已完成(resolved)*，调用*done()*方法指定的回调函数
 * 如果执行状态是*已失败(rejected)*，调用*fail()*方法指定的回调函数
 * 如果执行状态是*未完成* ，则继续等待，或者调用*progress()*方法指定的回调函数（jQuery1.7版本添加）
-* 这两种方法可以用于程序员对*deferred对象*进行手动指定*执行状态*，从而触发done(),fail()方法
+* 这两种方法可以用于程序员对*deferred对象*进行手动指定*执行状态*，从而触发*done()*,*fail()*方法
 
 ---
 
@@ -268,6 +275,7 @@ deferred对象的优点：
 ## deferred.promise()方法（二）
 
 为了避免deferred对象被改变状态，提供了deferred.promise()方法:
+
 * 在原来的*deferred对象*上返回另一个deferred对象
 * 只开放与改变执行状态无关的方法（比如done()方法和fail()方法）
 * 屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法）
@@ -295,9 +303,9 @@ deferred对象的优点：
 	    .fail(function(){ alert("出错啦！"); });
 	d.resolve(); // 此时，这个语句是无效的
 ```
-* [Demo8](http://jsfiddle.net/Yur4R/)
 * *wait()函*数返回的是*promise对象*
 * *promise对象*不支持*resolve*方法和*reject*方法，无法改变这个对象的*执行状态*
+* [Demo8](http://jsfiddle.net/Yur4R/)
 
 ---
 
@@ -329,17 +337,15 @@ deferred对象的优点：
 
 ## 普通操作的回调函数接口（中）
 
-* 另一种防止执行状态被外部改变的方法：
-* 使用deferred对象的建构函数*$.Deferred()*，直接把*wait()*传入
-
+使用deferred对象的建构函数*$.Deferred()*，直接把*wait()*传入
 ```javascript
 	$.Deferred(wait)
 	　　	.done(function(){ alert("哈哈，成功了！"); })
 	　　	.fail(function(){ alert("出错啦！"); });
 ```
-* [Demo10](http://jsfiddle.net/ruanyf/CucGp/)
 * *$.Deferred()*可以接受一个函数名（注意，是函数名）作为参数
 * *$.Deferred()*所生成的*deferred对象*将作为这个函数的默认参数并执行
+* [Demo10](http://jsfiddle.net/ruanyf/CucGp/)
 
 ---
 
@@ -347,8 +353,7 @@ deferred对象的优点：
 
 ## 普通操作的回调函数接口（下）
 
-除了上面两种方法以外，我们还可以直接在 *wait对象* 上部署 *deferred接口*：
-
+我们还可以直接在 *wait对象* 上部署 *deferred接口*：
 ```javascript
 	var dtd = $.Deferred(); // 生成Deferred对象
 	var wait = function(dtd){
@@ -406,6 +411,8 @@ $.ajax( "test.html" )
 @state: blue
 
 ## 谢谢大家！
+
+### Q & A
 
 <p style="font-size:6em"><i class="icon-smile"></i></p>
 
