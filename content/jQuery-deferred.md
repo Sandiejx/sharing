@@ -410,6 +410,7 @@ $.ajax( "test.html" )
 
 @state: blue
 
+<img src="img/deferred/me.jpg" alt="" />
 ## THANK YOU ~ ^。^
 ### Q & A
 
