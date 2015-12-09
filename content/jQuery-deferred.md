@@ -1,7 +1,6 @@
 # 关于deferred对象的简单介绍
 
 ---
-
 @state: blue, @fragment
 
 ## About Me
@@ -10,10 +9,76 @@
 * ISUX - UI开发
 * Qlippie项目组
 
-<p style="font-size:120%;margin-top:0.5em">
-    <a href="https://github.com/sandiejx" target="_blank" title="Github"><i class="fa fa-github"></i></a>&nbsp;
-    <a href="http://weibo.com/u/2283784810" target="_blank" title="Flickr"><i class="fa-weibo"></i></a>&nbsp;
-</p>
+@state: blue, @fragment
+<style type="text/css">
+.reveal .slides h1,
+.reveal .slides h2,
+.reveal .slides h3,
+.reveal .slides h4,
+.reveal .slides p,
+.reveal .slides li {
+    font-family: Helvetica;
+}
+.self-intro .head {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background: url(img/deferred/head.jpg) no-repeat center center;
+    background-size: 213px;
+}
+.self-intro .name {
+    display: inline-block;
+    padding-left: 30px;
+    position: relative;
+    top: -45px;
+}
+.contact-list .fa{
+    font-size: 46px; 
+    padding-right: 10px;
+}
+
+.contact-list a {
+    color: white;
+}
+.reveal .wc-title {
+    color: #999;
+}
+.initial-web {
+    color: #0099CC;
+}
+.initial-component {
+    color: #669900;
+}
+.reveal .slides .today {
+    color: rgb(206, 21, 21);
+    font-size: 184px;
+    border: 8px solid rgb(206, 21, 21);
+    padding: 100px;
+    -webkit-transform: rotate(20deg);
+    display: block;
+    position: relative;
+    top: -230px;
+    background: rgba(255, 255, 255, 0.5);
+}
+</style>
+
+<link rel="stylesheet" href="css/slides/high_performance_animation.css" />
+
+<div class="self-intro">
+    <span class="head"></span>
+    <h2 class="name">Sandyxjiang</h2>
+</div>
+
+<ul class="contact-list">
+    <li>江雪</li>
+    <li>ISUX - UI开发</li>
+    <li>Qlippie项目组</li>
+    <p style="font-size:120%;margin-top:0.5em">
+        <a href="https://github.com/sandiejx" target="_blank" title="Github"><i class="fa fa-github"></i></a>&nbsp;
+    	<a href="http://weibo.com/u/2283784810" target="_blank" title="Flickr"><i class="fa-weibo"></i></a>&nbsp;
+    </p>
+</ul>
 
 ---
 
