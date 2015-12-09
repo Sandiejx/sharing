@@ -408,21 +408,24 @@ $.ajax( "test.html" )
 ```
 ---
 @state: blue
+
+# THANK YOU ~ ^。^
+# Q & A
+
 <style type="text/css">
-img{
-    display: block;
+.mi{
     width: 150px;
     height: 150px;
     border-radius: 100px;
     background: url(img/deferred/head.jpg) no-repeat 88% 39%;
     background-size: 300px;
+    text-align:center;
 }
 </style>
-<img src="img/deferred/me.jpg" alt="" />
-## THANK YOU ~ ^。^
-### Q & A
 
-<p style="font-size:6em"><i class="icon-smile"></i></p>
+<img src="img/deferred/me.jpg" class="mi" alt="" />
+
+---
 
 <style type="text/css">
 .reveal h1 {font-size:2.4em;}
