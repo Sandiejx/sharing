@@ -64,9 +64,9 @@
 </div>
 
 <ul class="contact-list">
-    <li>江雪</li>
+    <li>江 雪</li>
     <li>ISUX - UI开发</li>
-    <li>Qlippie项目组</li>
+    <li>Qlippie 项目组</li>
     <p style="font-size:120%;margin-top:0.5em">
         <a href="https://github.com/sandiejx" target="_blank" title="Github"><i class="fa fa-github"></i></a>&nbsp;
     	<a href="http://weibo.com/u/2283784810" target="_blank" title="Flickr"><i class="fa-weibo"></i></a>&nbsp;
@@ -226,8 +226,8 @@ deferred对象的优点：
 	    return dtd;
 	}
 	$.when(wait(dtd))//wait()函数返回的是deferred对象，可以加上链式操作
-　　     .done(function(){ alert("哈哈，成功了！"); })
-　　	 .fail(function(){ alert("出错啦！"); });
+　　     	.done(function(){ alert("哈哈，成功了！"); })
+　　	 	.fail(function(){ alert("出错啦！"); });
 	
 ```
 * [Demo6](http://jsfiddle.net/gfFPj/)
@@ -304,7 +304,7 @@ deferred对象的优点：
 	d.resolve(); // 此时，这个语句是无效的
 ```
 * *wait()函*数返回的是*promise对象*
-* *promise对象*不支持*resolve*方法和*reject*方法，无法改变这个对象的*执行状态*
+* *promise对象*不支持*resolve*方法和*reject*方法，无法改变对象的*执行状态*
 * [Demo8](http://jsfiddle.net/Yur4R/)
 
 ---
