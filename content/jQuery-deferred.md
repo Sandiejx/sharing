@@ -134,7 +134,7 @@ $.ajax({
     	return deferred;
     }else{
     	//XHR对象不能进行链式操作
-    	return XmlHttpRequest;
+    	return XMLHttpRequest;
     }
 ```
 
