@@ -223,9 +223,9 @@ $.ajax({
 	　　.fail(function(){ alert("出错啦！"); });
 	};
 ```
-*deferred对象的优点
+* deferred对象的优点
     * 统一了编程接口
-    * ajax操作 & 本地操作 
+    * ajax操作 & 本地操作
     * 异步操作 & 同步操作
     * [Demo5](http://jsfiddle.net/5wzrt/)
 
@@ -295,7 +295,7 @@ $.ajax({
 
 ## deferred.promise()方法（二）
 
-*为了避免deferred对象被改变状态，提供了deferred.promise()方法
+* 为了避免deferred对象被改变状态，提供了deferred.promise()方法
     * 在原来的*deferred对象*上返回另一个deferred对象
     * 只开放与改变执行状态无关的方法（比如done()方法和fail()方法）
     * 屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法）
