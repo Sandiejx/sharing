@@ -410,12 +410,12 @@ $.ajax( "test.html" )
 @state: blue
 <style type="text/css">
 img{
-    display: inline-block;
+    display: block;
     width: 150px;
     height: 150px;
     border-radius: 100px;
     background: url(img/deferred/head.jpg) no-repeat 88% 39%;
-    background-size: cover;
+    background-size: 300px;
 }
 </style>
 <img src="img/deferred/me.jpg" alt="" />
