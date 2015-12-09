@@ -3,7 +3,7 @@
     <h1 style="margin:0;padding:0;line-height:3">关于Deferred对象简单介绍</h1>
 </div>
 
-@bg: /img/deferred/cover.jpg, @bgColor: #eee
+@bg: img/deferred/cover.jpg, @bgColor: #eee
 
 ---
 
@@ -149,8 +149,8 @@ $.ajax({
 　　 	.done(function(){ alert("哈哈，成功了！"); })
 　　 	.fail(function(){ alert("出错啦！"); });
 ```
-* done == success
-* fail == error
+* done - success
+* fail - error
 * [Demo2](http://jsfiddle.net/ruanyf/dYKLJ/)
 
 ---
@@ -174,7 +174,6 @@ $.ajax({
 @state: black, @fragment
 
 ## 三、为多个操作指定回调函数
-
 
 ```javascript
 	$.when($.ajax("test1.html"), $.ajax("test2.html"))
@@ -204,12 +203,11 @@ $.ajax({
 	　　.fail(function(){ alert("出错啦！"); });
 	};
 ```
-deferred对象的优点：
-
-* 统一了编程接口
-* ajax操作 & 本地操作 
-* 异步操作 & 同步操作
-* [Demo5](http://jsfiddle.net/5wzrt/)
+*deferred对象的优点
+    * 统一了编程接口
+    * ajax操作 & 本地操作 
+    * 异步操作 & 同步操作
+    * [Demo5](http://jsfiddle.net/5wzrt/)
 
 ---
 
@@ -277,12 +275,11 @@ deferred对象的优点：
 
 ## deferred.promise()方法（二）
 
-为了避免deferred对象被改变状态，提供了deferred.promise()方法:
-
-* 在原来的*deferred对象*上返回另一个deferred对象
-* 只开放与改变执行状态无关的方法（比如done()方法和fail()方法）
-* 屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法）
-* 从而使得执行状态不能被改变
+*为了避免deferred对象被改变状态，提供了deferred.promise()方法
+    * 在原来的*deferred对象*上返回另一个deferred对象
+    * 只开放与改变执行状态无关的方法（比如done()方法和fail()方法）
+    * 屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法）
+    * 从而使得执行状态不能被改变
 
 ---
 
@@ -384,8 +381,8 @@ deferred对象的优点：
 * *deferred.done()* 指定操作 *成功* 时的回调函数
 * *deferred.fail()* 指定操作 *失败* 时的回调函数
 * *deferred.promise()* 
- * >没有参数时，返回一个新的 deferred对象 ，该对象的运行状态无法被改变
- * >接受参数时，作用为在参数对象上部署 deferred接口
+    * 没有参数时，返回一个新的 deferred对象 ，该对象的运行状态无法被改变
+    * 接受参数时，作用为在参数对象上部署 deferred接口
 * *deferred.resolve()* 手动改变 *deferred对象* 的运行状态为 "*已完成*" ，从而立即触发 *done()* 方法。
 * *deferred.reject()* 手动改变 *deferred对象* 的运行状态为 "*已失败*" ，从而立即触发 *fail()* 方法。
 * *$.when()* 为多个操作指定回调函数。
@@ -401,8 +398,8 @@ deferred对象的优点：
 	$.when($.ajax( "/main.php" ))
 	　　.then(successFunc, failureFunc );
 ```
-* >如果 *then()* 有两个参数，那么第一个参数是 *done()* 方法的回调函数，第二个参数是 *fail()* 方法的回调方法。
-* >如果 *then()* 只有一个参数，那么等同于 *done()* 
+    * 如果 *then()* 有两个参数，那么第一个参数是 *done()* 方法的回调函数，第二个参数是 *fail()* 方法的回调方法。
+    * 如果 *then()* 只有一个参数，那么等同于 *done()* 
 * *deferred.always()* 方法也是用来指定回调函数的，它的作用是，不管调用的是 
 * *deferred.resolve()* 还是 *deferred.reject()* ，最后总是执行。
 ```javascript
