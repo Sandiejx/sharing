@@ -425,8 +425,6 @@ $.ajax( "test.html" )
 
 <img src="img/deferred/me.jpg" class="mi" alt="" />
 
----
-
 <style type="text/css">
 .reveal h1 {font-size:2.4em;}
 .reveal h2 {font-size:1.6em;}
