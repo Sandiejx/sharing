@@ -3,7 +3,7 @@
     <h1 style="margin:0;padding:0;line-height:3">关于deferred对象简单介绍</h1>
 </div>
 
-@bg: img/deferred/cover.jpg, @bgColor: #eee
+@bg: img/deferred/head.jpg, @bgColor: #eee
 
 ---
 
