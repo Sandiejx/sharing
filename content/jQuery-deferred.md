@@ -59,7 +59,6 @@
 <link rel="stylesheet" href="css/slides/high_performance_animation.css" />
 
 <div class="self-intro">
-    <h1 class="title">About Me</h1>
     <span class="head"></span>
     <h2 class="name">Sandyxjiang</h2>
 </div>
