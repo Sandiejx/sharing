@@ -17,8 +17,8 @@
     width: 150px;
     height: 150px;
     border-radius: 100px;
-    background: url(img/deferred/head.jpg) no-repeat center center;
-    background-size: 213px;
+    background: url(img/deferred/head.jpg) no-repeat 88% 39%;
+    background-size: cover;
 }
 .self-intro .name {
     display: inline-block;
