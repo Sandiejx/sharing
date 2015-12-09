@@ -1,13 +1,6 @@
 # 关于deferred对象的简单介绍
 
 ---
-@state: blue, @fragment
-
-## About Me
-
-* Sandyxjiang
-* ISUX - UI开发
-* Qlippie项目组
 
 @state: blue, @fragment
 <style type="text/css">
@@ -66,6 +59,7 @@
 <link rel="stylesheet" href="css/slides/high_performance_animation.css" />
 
 <div class="self-intro">
+    <h1 class="title">About Me</h1>
     <span class="head"></span>
     <h2 class="name">Sandyxjiang</h2>
 </div>
