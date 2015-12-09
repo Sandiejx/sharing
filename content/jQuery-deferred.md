@@ -410,7 +410,7 @@ $.ajax( "test.html" )
 
 @state: blue
 
-## THANK YOU ~
+## THANK YOU ~ ^。^
 ### Q & A
 
 <p style="font-size:6em"><i class="icon-smile"></i></p>
