@@ -1,4 +1,9 @@
-# 关于deferred对象的简单介绍
+
+<div style="padding: 1em 2em; background:rgba(0,0,0,0.8);overflow: hidden;text-align:center">
+    <h1 style="margin:0;padding:0;line-height:3">关于deferred对象的简单介绍</h1>
+</div>
+
+@bg: img/fetools/cover2.jpg, @bgColor: #eee
 
 ---
 
