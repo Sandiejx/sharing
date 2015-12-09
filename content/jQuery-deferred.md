@@ -409,7 +409,14 @@ $.ajax( "test.html" )
 ---
 
 @state: blue
-
+img{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background: url(img/deferred/head.jpg) no-repeat 88% 39%;
+    background-size: cover;
+}
 <img src="img/deferred/me.jpg" alt="" />
 ## THANK YOU ~ ^。^
 ### Q & A
