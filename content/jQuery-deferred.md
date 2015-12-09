@@ -78,6 +78,26 @@
 
 ---
 
+## 编辑器
+
+* [VIM](http://www.vim.org/)
+    * [Vundle](https://github.com/gmarik/Vundle.vim): the plug-in manager for Vim
+
+* [Sublime Text](http://www.sublimetext.com/)
+    * [Package Control](https://sublime.wbond.net/)
+
+---
+
+## 代码生成工具
+
+* [Emmet](http://emmet.io/)
+* CSS3生成工具
+    * [CSS3 Generator](http://css3generator.com/)
+    * [Ultimate CSS Gradient Generator](http://www.colorzilla.com/gradient-editor/)
+    * [Prefix Free](http://leaverou.github.io/prefixfree/)
+
+---
+
 @state: black, @fragment
 
 ## 什么是deferred对象
