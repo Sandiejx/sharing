@@ -1,13 +1,5 @@
 
-<div style="padding: 1em 2em; background:rgba(0,0,0,0.8);overflow: hidden;text-align:center">
-    <h1 style="margin:0;padding:0;line-height:3">关于Deferred对象简单介绍</h1>
-</div>
-
-@bg: img/deferred/cover.jpg, @bgColor: #eee
-
----
-
-@state: blue, @fragment
+@state: black, @fragment
 <style type="text/css">
 .reveal li ul {
     margin-top: 0.5em;
@@ -47,15 +39,22 @@
 
 ---
 
+<div style="padding: 1em 2em; background:rgba(0,0,0,0.8);overflow: hidden;text-align:center">
+    <h1 style="margin:0;padding:0;line-height:3">关于Deferred对象简单介绍</h1>
+</div>
+
+@bg: img/deferred/cover.jpg, @bgColor: #eee
+
+---
+
 @state: black, @fragment
 
 ## 什么是deferred对象
 
 * 从*jQuery 1.5.0*版本开始引入*deferred对象*
 * *deferred对象*就是jQuery的*回调函数*解决方案
+* 为jQuery提供*统一*的编程接口
 * 彻底改变了如何在jQuery中使用*ajax*
-* 解决了如何*处理耗时操作*的问题
-* 提供*统一*的编程接口
 
 ---
 
@@ -156,9 +155,22 @@ $.ajax({
 
 ---
 
+## 四、普通操作的回调函数接口(上)
+
+---
+
 @state: black, @fragment
 
-## 四、普通操作的回调函数接口（上）
+## deferred对象的优点
+* 统一了编程接口
+* ajax操作 & 本地操作
+* 异步操作 & 同步操作
+
+---
+
+@state: black, @fragment
+
+## Demo
 
 ```javascript
 	var wait = function(){
@@ -172,11 +184,7 @@ $.ajax({
 	　　.fail(function(){ alert("出错啦！"); });
 	};
 ```
-* deferred对象的优点
-    * 统一了编程接口
-    * ajax操作 & 本地操作
-    * 异步操作 & 同步操作
-    * [Demo5](http://jsfiddle.net/5wzrt/)
+* [Demo5](http://jsfiddle.net/5wzrt/)
 
 ---
 
@@ -206,13 +214,17 @@ $.ajax({
 
 @state: black, @fragment
 
-## deferred.resolve()方法和deferred.reject()方法
+## *deferred.resolve()*方法 & *deferred.reject()*方法
 
 * deferred对象有三种执行状态,*未完成*、*已完成*、*已失败*： 
 * 如果执行状态是*已完成(resolved)*，调用*done()*方法指定的回调函数
 * 如果执行状态是*已失败(rejected)*，调用*fail()*方法指定的回调函数
 * 如果执行状态是*未完成* ，则继续等待，或者调用*progress()*方法指定的回调函数（jQuery1.7版本添加）
 * 这两种方法可以用于程序员对*deferred对象*进行手动指定*执行状态*，从而触发*done()*,*fail()*方法
+
+---
+
+## Promise对象
 
 ---
 
