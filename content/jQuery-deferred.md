@@ -1,5 +1,5 @@
 
-@state: black, @fragment
+@state: blue, @fragment
 <style type="text/css">
 .reveal li ul {
     margin-top: 0.5em;
