@@ -131,7 +131,7 @@ $.ajax({
 	$.ajax("test.html")
 　　 	.done(function(){ alert("哈哈，成功了！");} )
 　　 	.fail(function(){ alert("出错啦！"); } )
-　　	.done(function(){ alert("第二个回调函数！");} );
+　　	 .done(function(){ alert("第二个回调函数！");} );
 ```
 * deferred对象允许你自由添加*多个*回调函数
 * 回调函数可以添加任意多个，它们按照*添加顺序*执行
@@ -162,9 +162,9 @@ $.ajax({
 @state: black, @fragment
 
 ## deferred对象的优点
-* 统一了编程接口
-* ajax操作 & 本地操作
-* 异步操作 & 同步操作
+* *统一*了编程接口
+* *ajax*操作 & *本地*操作
+* *异步*操作 & *同步*操作
 
 ---
 
@@ -284,7 +284,7 @@ $.ajax({
 	    .fail(function(){ alert("出错啦！"); });
 	d.resolve(); // 此时，这个语句是无效的
 ```
-* *wait()函*数返回的是*promise对象*
+* *wait()*函数返回的是*promise对象*
 * *promise对象*不支持*resolve*方法和*reject*方法，无法改变对象的*执行状态*
 * [Demo8](http://jsfiddle.net/Yur4R/)
 
@@ -382,7 +382,7 @@ $.ajax({
     * 如果 *then()* 有两个参数，那么第一个参数是 *done()* 方法的回调函数，第二个参数是 *fail()* 方法的回调方法。
     * 如果 *then()* 只有一个参数，那么等同于 *done()* 
 * *deferred.always()* 方法也是用来指定回调函数的，它的作用是，不管调用的是 
-* *deferred.resolve()* 还是 *deferred.reject()* ，最后总是执行。
+	* *deferred.resolve()* 还是 *deferred.reject()* ，最后总是执行。
 ```javascript
 $.ajax( "test.html" )
 　　.always( function() { alert("已执行！");} );
