@@ -381,8 +381,8 @@ $.ajax({
 ```
     * 如果 *then()* 有两个参数，那么第一个参数是 *done()* 方法的回调函数，第二个参数是 *fail()* 方法的回调方法。
     * 如果 *then()* 只有一个参数，那么等同于 *done()* 
-* *deferred.always()* 方法也是用来指定回调函数的，它的作用是，不管调用的是 
-	* *deferred.resolve()* 还是 *deferred.reject()* ，最后总是执行。
+* *deferred.always()* 方法也是用来指定回调函数的，它的作用是：
+	* 不管调用的是 *deferred.resolve()* 还是 *deferred.reject()* ，最后总是执行。
 ```javascript
 $.ajax( "test.html" )
 　　.always( function() { alert("已执行！");} );
