@@ -254,7 +254,7 @@ $.ajax({
 
 ## deferred.promise()方法（二）
 
-* 为了避免deferred对象被改变状态，提供了deferred.promise()方法
+* 为了避免*deferred对象*被改变状态，提供了*deferred.promise()*方法
     * 在原来的*deferred对象*上返回promise对象
     * 只 *开放*与改变执行状态无关的方法（比如*done()*方法和*fail()*方法）
     * *屏蔽*与改变执行状态有关的方法（比如*resolve()*方法和*reject()*方法）
@@ -292,7 +292,7 @@ $.ajax({
 
 ## deferred.promise()方法(四)
 
-更好的写法应该是，将dtd对象变成wait()函数的内部对象：
+更好的写法应该是，将*dtd对象*变成*wait()*函数的*内部对象*：
 ```javascript
 	var wait = function(dtd){
 		var dtd = $.Deferred(); //在函数内部，新建一个Deferred对象
