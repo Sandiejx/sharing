@@ -88,7 +88,6 @@ $.ajax({
 　　　　}
 　　});
 ```
-* [Demo1](http://jsfiddle.net/ruanyf/pdQYH/)
 
 ---
 
@@ -119,7 +118,6 @@ $.ajax({
 ```
 * done - success
 * fail - error
-* [Demo2](http://jsfiddle.net/ruanyf/dYKLJ/)
 
 ---
 
@@ -135,7 +133,7 @@ $.ajax({
 ```
 * deferred对象允许你自由添加*多个*回调函数
 * 回调函数可以添加任意多个，它们按照*添加顺序*执行
-* [Demo3](http://jsfiddle.net/ruanyf/CdKjn/)
+* [Demo1](http://jsfiddle.net/ruanyf/sQYjs//)
 
 ---
 
@@ -151,7 +149,7 @@ $.ajax({
 
 * 引入一个新的方法*$.when()*
 * deferred 对象允许你为*多个事件*指定一个回调函数
-* [Demo4](http://jsfiddle.net/ruanyf/CdKjn/)
+* [Demo2](http://jsfiddle.net/ruanyf/CdKjn/)
 
 ---
 
@@ -184,7 +182,7 @@ $.ajax({
 	　　.fail(function(){ alert("出错啦！"); });
 	};
 ```
-* [Demo5](http://jsfiddle.net/5wzrt/)
+* [Demo3](http://jsfiddle.net/5wzrt/)
 
 ---
 
@@ -192,7 +190,7 @@ $.ajax({
 
 ## $.when()方法
 
-在于 $.when() 的参数只能是 deferred 对象，所以必须对 wait() 进行改写：
+在于*$.when()*的参数只能是*deferred对象*，所以必须对*wait()*进行改写：
 ```javascript
 	var dtd = $.Defferred();
 	function wait(dtd){
@@ -204,11 +202,11 @@ $.ajax({
 	    return dtd;
 	}
 	$.when(wait(dtd))//wait()函数返回的是deferred对象，可以加上链式操作
-　　     	.done(function(){ alert("哈哈，成功了！"); })
-　　	 	.fail(function(){ alert("出错啦！"); });
+　　     .done(function(){ alert("哈哈，成功了！"); })
+　　	 .fail(function(){ alert("出错啦！"); });
 	
 ```
-* [Demo6](http://jsfiddle.net/gfFPj/)
+* [Demo4](http://jsfiddle.net/gfFPj/)
 
 ---
 
@@ -224,7 +222,7 @@ $.ajax({
 
 ---
 
-## Promise对象
+# Promise对象
 
 ---
 
@@ -247,8 +245,8 @@ $.ajax({
 	    .fail(function(){ alert("出错啦！"); });
 	dtd.resolve();//加了一个resolve方法
 ```
+* [Demo5](http://jsfiddle.net/nBFse/)
 * *dtd.resolve()*直接改变了dtd对象的*执行状态*，导致*done()*方法立刻执行
-* [Demo7](http://jsfiddle.net/nBFse/)
 
 ---
 
@@ -257,10 +255,10 @@ $.ajax({
 ## deferred.promise()方法（二）
 
 * 为了避免deferred对象被改变状态，提供了deferred.promise()方法
-    * 在原来的*deferred对象*上返回另一个deferred对象
-    * 只开放与改变执行状态无关的方法（比如done()方法和fail()方法）
-    * 屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法）
-    * 从而使得执行状态不能被改变
+    * 在原来的*deferred对象*上返回promise对象
+    * 只 *开放*与改变执行状态无关的方法（比如*done()*方法和*fail()*方法）
+    * *屏蔽*与改变执行状态有关的方法（比如*resolve()*方法和*reject()*方法）
+    * *不能改变*执行状态
 
 ---
 
@@ -284,9 +282,9 @@ $.ajax({
 	    .fail(function(){ alert("出错啦！"); });
 	d.resolve(); // 此时，这个语句是无效的
 ```
+* [Demo6](http://jsfiddle.net/Yur4R/)
 * *wait()*函数返回的是*promise对象*
 * *promise对象*不支持*resolve*方法和*reject*方法，无法改变对象的*执行状态*
-* [Demo8](http://jsfiddle.net/Yur4R/)
 
 ---
 
@@ -310,7 +308,7 @@ $.ajax({
 	　　.done(function(){ alert("哈哈，成功了！"); })
 	　　.fail(function(){ alert("出错啦！"); });
 ```
-* [Demo9](http://jsfiddle.net/q9TvT/)
+* [Demo7](http://jsfiddle.net/q9TvT/)
 
 ---
 
@@ -324,9 +322,9 @@ $.ajax({
 	　　	.done(function(){ alert("哈哈，成功了！"); })
 	　　	.fail(function(){ alert("出错啦！"); });
 ```
-* *$.Deferred()*可以接受一个函数名（注意，是函数名）作为参数
+* *$.Deferred()*可以接受一个函数名（*注意，是函数名*）作为参数
 * *$.Deferred()*所生成的*deferred对象*将作为这个函数的默认参数并执行
-* [Demo10](http://jsfiddle.net/ruanyf/CucGp/)
+* [Demo8](http://jsfiddle.net/ruanyf/CucGp/)
 
 ---
 
@@ -350,7 +348,7 @@ $.ajax({
 	wait(dtd);
 ```
 * *dtd.promise(wait)*，在wait对象上只部署*Deferred接口*但不执行
-* *[Demo11](http://jsfiddle.net/ruanyf/PF7Xf/)*
+* *[Demo9](http://jsfiddle.net/ruanyf/PF7Xf/)*
 
 ---
 
@@ -364,9 +362,9 @@ $.ajax({
 * *deferred.promise()* 
     * 没有参数时，返回一个新的 deferred对象 ，该对象的运行状态无法被改变
     * 接受参数时，作用为在参数对象上部署 deferred接口
-* *deferred.resolve()* 手动改变 *deferred对象* 的运行状态为 "*已完成*" ，从而立即触发 *done()* 方法。
-* *deferred.reject()* 手动改变 *deferred对象* 的运行状态为 "*已失败*" ，从而立即触发 *fail()* 方法。
-* *$.when()* 为多个操作指定回调函数。
+* *deferred.resolve()* 手动改变 *deferred对象* 的运行状态为 "*已完成*" ，从而立即触发 *done()* 方法
+* *deferred.reject()* 手动改变 *deferred对象* 的运行状态为 "*已失败*" ，从而立即触发 *fail()* 方法
+* *$.when()* 为多个操作指定回调函数
 
 ---
 
@@ -379,14 +377,16 @@ $.ajax({
 	$.when($.ajax( "/main.php" ))
 	　　.then(successFunc, failureFunc );
 ```
-    * 如果 *then()* 有两个参数，那么第一个参数是 *done()* 方法的回调函数，第二个参数是 *fail()* 方法的回调方法。
+    * 如果 *then()* 有两个参数，那么第一个参数是 *done()* 方法的回调函数，第二个参数是 *fail()* 方法的回调方法
     * 如果 *then()* 只有一个参数，那么等同于 *done()* 
 * *deferred.always()* 方法也是用来指定回调函数的，它的作用是：
-	* 不管调用的是 *deferred.resolve()* 还是 *deferred.reject()* ，最后总是执行。
+	* 不管调用的是 *deferred.resolve()* 还是 *deferred.reject()* ，最后总是执行
 ```javascript
 $.ajax( "test.html" )
 　　.always( function() { alert("已执行！");} );
 ```
+
+* 更多Deferred对象的方法 [*Deferred Object*](http://api.jquery.com/category/deferred-object/)
 ---
 @state: blue
 
