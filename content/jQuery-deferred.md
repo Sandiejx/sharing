@@ -133,7 +133,7 @@ $.ajax({
 ```
 * deferred对象允许你自由添加*多个*回调函数
 * 回调函数可以添加任意多个，它们按照*添加顺序*执行
-* [Demo1](http://jsfiddle.net/ruanyf/sQYjs//)
+* [Demo1](http://jsfiddle.net/ruanyf/sQYjs/)
 
 ---
 
