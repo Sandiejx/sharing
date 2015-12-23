@@ -324,7 +324,6 @@ $.ajax({
 ```
 * *$.Deferred()*可以接受一个函数名（*注意，是函数名*）作为参数
 * *$.Deferred()*所生成的*deferred对象*将作为这个函数的默认参数并执行
-* [Demo8](http://jsfiddle.net/ruanyf/CucGp/)
 
 ---
 
@@ -348,7 +347,6 @@ $.ajax({
 	wait(dtd);
 ```
 * *dtd.promise(wait)*，在wait对象上只部署*Deferred接口*但不执行
-* *[Demo9](http://jsfiddle.net/ruanyf/PF7Xf/)*
 
 ---
 
